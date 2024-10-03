@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --main-color: #1abc9c;
+    --second-color: #2c3e50;
+    --content-color: #fff;
+}
+
+/*Start Header*/
+/*Start Nav*/
+header nav {
+    width: 100%;
+    background-color: var(--second-color);
+    color: var(--content-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    position: fixed;
+    z-index: 10;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px -1px rgba(4, 4, 4, 0.508);
+}
+
+header nav .container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .container .logo{
+    cursor: pointer;
+}
+header nav .container .logo a{
+    text-decoration: none;
+    color: var(--content-color);
+}
+header nav .container ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav .container ul li {
+    margin: 0 15px;
+}
+
+header nav .container ul li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+header .nav1 .container ul li a {
+    color: var(--content-color);
+}
+
+/*START NAV2::RESPONSIVE ONLY*/
+header .nav2 {
+    display: none;
+}
+
+header .nav2 .links {
+    position: relative;
+}
+
+header .nav2 .burger-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .nav2 .burger-icon div {
+    width: 20px;
+    height: 2px;
+    background-color: var(--content-color);
+}
+
+header .nav2 .links ul {
+    display: none;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    min-width: 200px;
+    z-index: 1;
+}
+
+header .links:hover ul {
+    display: block;
+}
+
+header .nav2 ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    top: -20px;
+    right: 3px;
+}
+
+header .nav2 ul a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: var(--second-color);
+    transition: .5s;
+
+}
+
+header .nav2 ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+
+/*END NAV2::RESPONSIVE ONLY*/
+/*End Nav*/
+/*Start Hero*/
+header section.hero {
+    height: 100vh;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--content-color);
+}
+
+header section.hero .img {
+    position: relative;
+    width: 187px;
+    height: 187px;
+    border-radius: 50%;
+    background-color: var(--second-color);
+}
+
+header section.hero .img img {
+    width: 200px;
+    position: absolute;
+    top: -8%;
+    left: -4%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+header section.hero .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+header section.hero .content h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+header section.hero .content .star {
+    position: relative;
+}
+
+header section.hero .content .star::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 120px;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: var(--content-color);
+    margin-left: 25%;
+}
+
+header section.hero .content .star::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 120px;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: var(--content-color);
+    margin-right: 25%;
+}
+
+header section.hero .content span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/*End Hero*/
+/*End Header*/
+
+/*Start main*/
+main section {
+    padding: 60px 0;
+}
+
+main section .title {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--second-color);
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 35px;
+}
+
+main section .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main section .heading .star {
+    position: relative;
+}
+
+main section .heading .star::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 80px;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    margin-left: 25%;
+}
+
+main section .heading .star::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 80px;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    margin-right: 25%;
+}
+
+/*Start Portfolio*/
+main section .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 40px;
+}
+
+main section .cards .card {
+    width: 325px;
+    height: 225px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+main section .cards .card:nth-child(1) {
+    background-color: #ba4c63;
+}
+
+main section .cards .card:nth-child(2) {
+    background-color: #1fa4b6;
+}
+
+main section .cards .card:nth-child(3) {
+    background-color: black;
+}
+
+main section .cards .card:nth-child(4) {
+    background-color: #1d83c1;
+}
+
+main section .cards .card:nth-child(5) {
+    background-color: #1037b5;
+}
+
+main section .cards .card:nth-child(6) {
+    background-color: #ccb2a3;
+}
+
+main section .cards .card img {
+    width: 180px;
+    border-radius: 50%;
+}
+
+/*End Portfolio*/
+/*Start About*/
+main section#about {
+    background-color: var(--main-color);
+}
+
+main section#about .heading .title {
+    color: var(--content-color);
+}
+
+main section#about .heading .star::before,
+main section#about .heading .star::after {
+    background: var(--content-color);
+}
+
+main section#about .content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 40px;
+}
+
+main section#about .content div {
+    width: 25%;
+}
+
+main section#about .content div p {
+    color: var(--content-color);
+    font-weight: 450;
+    font-size: 20px;
+}
+
+main section#about .btn {
+    width: 180px;
+    padding: 12px 10px;
+    background-color: transparent;
+    border: 1px solid var(--content-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+main section#about .btn button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--content-color);
+    font-weight: 500;
+}
+
+main section#about .btn i {
+    color: var(--content-color);
+}
+
+main section#about .btn:hover {
+    background-color: var(--content-color);
+}
+
+main section#about .btn:hover i,
+main section#about .btn:hover button {
+    color: var(--main-color);
+}
+
+/*End About*/
+/*Start Contact*/
+main section#contact .heading .star::before,
+main section#contact .heading .star::after {
+    background-color: var(--second-color);
+}
+
+main section#contact .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+main section#contact .form:last-child {
+    align-items: start;
+}
+
+main section#contact .form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+main section#contact .form input,
+main section#contact .form textarea {
+    width: 500px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(178, 171, 171);
+    transition: .6s;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+main section#contact .form label {
+    color: #727172;
+    font-weight: 500;
+}
+
+main section#contact .form button {
+    background-color: var(--main-color);
+    padding: 12px;
+    color: var(--content-color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+main section#contact .form button:hover {
+    background-color: var(--content-color);
+    color: var(--main-color);
+    border: 1.5px solid var(--main-color);
+}
+
+/*End Contact*/
+/*End main*/
+
+/*Start Footer*/
+footer .info {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: var(--second-color);
+    padding: 60px 0;
+    color: var(--content-color);
+}
+
+footer .info div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+footer .info div .content,
+footer .info div .icons {
+    width: 350px;
+}
+
+footer .info .links .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer .info .links .icons .icon {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--content-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+footer .info .links .icons .icon:hover {
+    border-color: var(--main-color);
+    background-color: var(--content-color);
+}
+
+footer .info .links .icons .icon i {
+    color: var(--content-color);
+}
+
+footer .info .links .icons .icon:hover i {
+    color: var(--main-color);
+}
+
+footer .info .freelance a {
+    color: var(--main-color);
+}
+
+footer .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--content-color);
+    background-color: #1a252f;
+    padding: 20px 0;
+}
+
+/*End Footer*/
+/*Start Responsive*/
+
+/*Common properties*/
+@media (max-width:992px) {
+    header .nav1 {
+        display: none;
+    }
+
+    header .nav2 {
+        display: flex;
+    }
+}
+
+/* Start Large Screen*/
+@media(min-width:769px) and (max-width:992px) {
+    header section.hero .content h2 {
+        font-size: 35px;
+    }
+
+    header section.hero .content span {
+        font-size: 15px;
+    }
+}
+
+/* End Large Screen*/
+
+/*Start Medium Screen*/
+@media(min-width:577px) and (max-width:768px) {
+    header .container .logo {
+        font-size: 15px;
+    }
+
+    header section.hero img {
+        width: 180px;
+    }
+
+    header section.hero .content h2 {
+        font-size: 25px;
+    }
+
+    header section.hero .content span {
+        font-size: 12px;
+    }
+
+    main section#about .content div p {
+        font-size: 16px;
+    }
+
+    main section#contact .form input,
+    main section#contact .form textarea {
+        width: 350px;
+    }
+}
+
+/*End Medium Screen*/
+
+/*Start Small Screen*/
+@media(max-width:576px) {
+    header .container .logo {
+        font-size: 10px;
+    }
+
+    header section.hero .img {
+        width: 140px;
+        height: 140px;
+    }
+
+    header section.hero .img img {
+        width: 150px;
+        top: -8%;
+        left: -4%;
+    }
+
+    header section.hero .content h2 {
+        font-size: 20px;
+    }
+
+    header section.hero .content span {
+        font-size: 10px;
+    }
+
+    main section#about .content div p {
+        font-size: 12px;
+    }
+
+    main section#contact .form input,
+    main section#contact .form textarea {
+        width: 200px;
+    }
+
+    header section.hero .content .star::after,
+    header section.hero .content .star::before {
+        width: 65px;
+    }
+
+    main section .title {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+/*End Small Screen*/
+/*End Responsive*/
